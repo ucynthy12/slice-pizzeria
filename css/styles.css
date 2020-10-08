@@ -1,0 +1,75 @@
+.card-body, .card-title {
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Piazzolla', serif;
+}
+
+.navbar {
+    padding: .8rem;
+    background: rgb(12, 12, 12);
+}
+
+.navbar-nav li {
+    padding-right: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: yellow;
+}
+
+.nav-link {
+    font-size: 1.1em;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 92vh;
+}
+
+.carousel-caption h6 {
+    padding-top: 40%;
+    font-size: 200%;
+    font-family: 'Parisienne', cursive;
+    color: rgb(255, 196, 0);
+}
+
+.carousel-caption h5 {
+    font-size: 200%;
+    font-family: 'Secular One', sans-serif;
+}
+
+.carousel-caption h3 {
+    font-size: 2rem;
+    font-family: 'Secular One', sans-serif;
+    text-transform: uppercase;
+}
+
+.carousel-caption .caption-img1 img {
+    height: 95%;
+}
+
+.carousel-caption .caption-top {
+    padding-top: 10%;
+}
+
+.carousel-caption .caption-img2 img {
+    padding-top: 10%;
+    /* margin-right: 20%; */
+}
+
+.btn-primary:hover {
+    background-color: yellow;
+    border: 1px solid rgb(139, 139, 3);
+    color: black;
+}
+
+.btn-primary {
+    background-color: green;
+    border: 1px solid green;
+    font-family: 'Secular One', sans-serif;
+    color: white;
+}
