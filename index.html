@@ -30,16 +30,16 @@
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Order</a>
+                        <a class="nav-link" href="#order">Order</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Connect</a>
+                        <a class="nav-link" href="#connect">Connect</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Hours</a>
+                        <a class="nav-link" href="#hours">Hours</a>
                     </li>
 
                 </ul>
@@ -62,8 +62,8 @@
                 <img src="/images/bg2.jpg">
                 <div class="carousel-caption">
                     <div class="row caption">
-                        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
-                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class=" col-md-2 col-lg-2"></div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
                             <h6>Delicious</h6>
                             <h3>MEAT pizza</h3>
                             <button type="button" class="btn-primary btn-outline-secondary btn-lg">ORDER</button>
@@ -94,7 +94,7 @@
 
     </div>
     <!--JUMBOTRON-->
-    <div class="container-fluid">
+    <div class="container-fluid" id="about">
         <div class="row jumbotron">
             <div class="col-xs-12 col-sm-12 col-md-9 col-xl-10">
                 <p class="lead">Slice joined the Outer Banks Pizza community in June of 2019.
@@ -108,51 +108,120 @@
         </div>
     </div>
     <!---build pizza-->
-    <div class="container-fluid">
+    <div class="container-fluid boom" id="order">
         <div class="row build text-center">
             <div class="col-12">
                 <h1 class="display-4">Make your Pizza!</h1>
+                <hr class="pizza">
+            </div>
+        </div>
+        <div class="container-fluid padding">
+            <div class="row padding">
+                <div class="col-md-2"></div>
+                <div class="col-xs-3 col-sm-3 col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="/images/pizzaSize.png">
+                        <div class="card-body">
+                            <h4 class="card-title">Small</h4>
+                            <h5>8 inches<h5>
+                                    <a href="#" class="btn-primary btn btn-outline-secondary">Order</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="/images/pizzaSize.png">
+                        <div class="card-body">
+                            <h4 class="card-title">Medium</h4>
+                            <h5>12 inches<h5>
+                                    <a href="#" class="btn btn-primary btn-outline-secondary">Order</a>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xs-3 col-sm-3 col-md-3">
+                    <div class="card">
+                        <img class="card-img-top" src="/images/pizzaSize.png">
+                        <div class="card-body">
+                            <h4 class="card-title">Large</h4>
+                            <h5>14 inches<h5>
+                                    <a href="#" class="btn btn-primary btn-outline-secondary">Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="bo">
+    </div>
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Build Your Pizza</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="/images/pizzaSize.png">
+                            </div>
+                            <div class="col-md-6 ml-auto">
+                                <h5 id="pizzaName"></h5>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 ml-auto">
+                                <h6>Select your crust</h6>
+                                <hr>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Crispy
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Stuffed
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Gluten-free
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-9">
+                                Level 1: .col-sm-9
+                                <div class="row">
+                                    <div class="col-8 col-sm-6">
+                                        Level 2: .col-8 .col-sm-6
+                                    </div>
+                                    <div class="col-4 col-sm-6">
+                                        Level 2: .col-4 .col-sm-6
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Buy</button>
+                    <button type="button" class="btn btn-primary">Cancel</button>
+                </div>
             </div>
         </div>
     </div>
-    <!---cards-->
-    <div class="container-fluid padding">
-        <div class="row padding">
-            <div class="col-md-2"></div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img class="card-img-top" src="/images/pizzaSize.png">
-                    <div class="card-body">
-                        <h4 class="card-title">Small</h4>
-                        <h5>8 inches<h5>
-                                <a href="#" class="btn btn-outline-secondary">Order</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img class="card-img-top" src="/images/pizzaSize.png">
-                    <div class="card-body">
-                        <h4 class="card-title">Medium</h4>
-                        <h5>12 inches<h5>
-                                <a href="#" class="btn btn-outline-secondary">Order</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img class="card-img-top" src="/images/pizzaSize.png">
-                    <div class="card-body">
-                        <h4 class="card-title">Large</h4>
-                        <h5>14 inches<h5>
-                                <a href="#" class="btn btn-outline-secondary">Order</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!--connect-->
-    <div class="container-fluid padding">
+    <div class="container-fluid padding" id="connect">
         <div class="row text-center padding">
             <div class="col-12">
                 <h2>Connect</h2>
@@ -168,11 +237,11 @@
     </div>
     <!--footer-->
     <footer>
-        <div class="container-fluid padding">
+        <div class="container-fluid padding" id="hours">
             <div class="row text-center">
                 <div class="col-md-4">
-                    <hr class="light">
-                    <h5>SLICE</h5>
+
+                    <h5 class="">SLICE</h5>
                     <hr class="light">
                     <p>0735055620</p>
                     <p>slice@gmail.com</p>
@@ -196,7 +265,7 @@
                     <hr class="light">
                     <h5>Service Area</h5>
                     <hr class="light">
-                    <p>Our Dine in experience we live you wanting for more!</p>
+                    <p>Our Dine-in experience we live you wanting for more!</p>
                     <p>We offer delivery services in:
 
                     <p>Kacyiru</p>
@@ -208,7 +277,7 @@
                     </p>
                 </div>
                 <div class="col-12">
-                    <hr class="light">
+                    <hr class="lightB">
                     <h5>&copy;Slice.com</h5>
                 </div>
             </div>
