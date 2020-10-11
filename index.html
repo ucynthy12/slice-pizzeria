@@ -12,13 +12,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/160b0d3734.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <title>SLICE-pizzeria</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Slice</a>
+            <a class="navbar-brand" href="#">
+                <img src="images/logo2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+              SLICE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -64,12 +73,12 @@
                     <div class="row caption">
                         <div class=" col-md-2 col-lg-2"></div>
                         <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
-                            <h6>Delicious</h6>
+                            <h6 class="animate__animated animate__bounceInLeft animate__delay-1s">Delicious</h6>
                             <h3>MEAT pizza</h3>
-                            <button type="button" class="btn-primary btn-outline-secondary btn-lg">ORDER</button>
+                            <button type="button" id="kgl" class="btn-primary btn-outline-secondary btn-lg">ORDER</button>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 caption-img1">
-                            <img class="caption-img" src="/images/pizza1.png">
+                            <img class="caption-img"  src="/images/pizza1.png">
                         </div>
                     </div>
                 </div>
@@ -80,12 +89,12 @@
                     <div class="row caption">
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 caption-top">
-                            <h6>Crunchy</h6>
+                            <h6 class="animate__animated animate__bounceInLeft animate__delay-1s">Crunchy</h6>
                             <h3>Veggie PIZZA</h3>
-                            <button type="button" class=" btn-primary btn-outline-secondary btn-lg">ORDER</button>
+                            <button type="button" id="order" class="btn-primary btn-outline-secondary btn-lg">ORDER</button>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 caption-img2">
-                            <img src="/images/pizza4.png">
+                            <img src="/images/bg10.png">
                         </div>
                     </div>
                 </div>
@@ -124,7 +133,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Small</h4>
                             <h5>8 inches<h5>
-                                    <a href="#" class="btn-primary btn btn-outline-secondary">Order</a>
+                                    <a href="#" id="kgl" class="btn-primary btn btn-outline-secondary">Order</a>
                         </div>
                     </div>
                 </div>
@@ -134,7 +143,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Medium</h4>
                             <h5>12 inches<h5>
-                                    <a href="#" class="btn btn-primary btn-outline-secondary">Order</a>
+                                    <a href="#" id="kgl" class="btn btn-primary btn-outline-secondary">Order</a>
                         </div>
                     </div>
                 </div>
@@ -144,7 +153,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Large</h4>
                             <h5>14 inches<h5>
-                                    <a href="#" class="btn btn-primary btn-outline-secondary">Order</a>
+                                    <a href="#" id="kgl" class="btn btn-primary btn-outline-secondary">Order</a>
                         </div>
                     </div>
                 </div>
@@ -153,73 +162,281 @@
 
         <hr class="bo">
     </div>
-    <div class="modal" tabindex="-1">
-        <div class="modal-dialog">
+    <div class="modal " id="small" tabindex="-1">
+        <div class="modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Build Your Pizza</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5 class="modal-title" style="font-family: 'Anton', sans-serif; color:green">BUILD YOUR
+                                PIZZA</h5>
+                        </div>
+
+                    </div>
+
                 </div>
-                <div class="modal-body">
+                <img src="https://res.cloudinary.com/ucynthy12/image/upload/v1602238280/76481989_yobazs.jpg"
+                    height="200px">
+                <div class="modal-body ">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-4">
-                                <img src="/images/pizzaSize.png">
+                            <div class="col-md-6">
+                                <h6>Select your size</h6>
+                                <hr>
                             </div>
-                            <div class="col-md-6 ml-auto">
-                                <h5 id="pizzaName"></h5>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+
+                                    <select class="form-control" id="size">
+                                        <option value="small">Small </option>
+                                        <option value="medium">Medium </option>
+                                        <option value="large">Large </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-1">
+                                <label for="size">Qty</label>
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="number" id="number" name="number" min="1" max="10">
+                            </div>
+
+                            &nbsp;
+                            &nbsp;
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-9 ">
+                                <h6>Select your crust</h6>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="crust" id="crust"
+                                                value="crispy" checked>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Crispy
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>+FRW 500</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="crust" id="crust"
+                                                value="stuffed" checked>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Stuffed
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>+FRW 800</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="crust" id="crust"
+                                                value="gluten" checked>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Gluten
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>+FRW 1000</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        &nbsp;
+                        &nbsp;
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h6>Additional Toppings</h6>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="toppings" type="checkbox"
+                                                value="pepperoni" id="toppings">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Pepperoni
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" id="price">
+                                        <p>+FRW 500</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="toppings" type="checkbox"
+                                                value="mushroom" id="toppings">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Mushroom
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" id="price">
+                                        <p>+FRW 1700</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="toppings" type="checkbox"
+                                                value="chicken" id="toppings">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Chicken
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" id="price">
+                                        <p>+FRW 2400</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="toppings" type="checkbox"
+                                                value="Pineapples" id="toppings">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Pineapples
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" id="price">
+                                        <p> +FRW 1300</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="toppings" type="checkbox" value="ham"
+                                                id="toppings">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Ham
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" id="price">
+                                        <p>+FRW 1700</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="toppings" type="checkbox"
+                                                value="extraCheese" id="toppings">
+                                            <label class="form-check-label" for="defaultCheck1">
+                                                Extra Cheese
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6" id="price">
+                                        <p>+FRW 1300</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        &nbsp;
+                        &nbsp;
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h6>Would you like your Pizza delivered?</h6>
+                            </div>
+                            <div class="col-md-9">
+                                <button type="submit" id='delivery' class="btn-primary">Yes</button>
+                                <button type="submit" id='no' class="btn-danger">no</button>
+                            </div>
+
+                            <div class="row">
+                                &nbsp;
+                                &nbsp;
+
+                                <div id="option" class="col-12">
+                                    <h6>They will be an extra +FRW1000 fee for delivery!</h6>
+                                    <hr>
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" id="name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="location">Location</label>
+                                        <input type="text" class="form-control" id="location">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        &nbsp;
+                        &nbsp;
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <button type="button" class="total" class="btn btn-primary">Total</button>
+                            </div>
+                        </div>
+                        &nbsp;
+                        &nbsp;
+                        <div class="row">
+                            <div id="total" class="col-sm-12">
+
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-6 ml-auto">
-                                <h6>Select your crust</h6>
-                                <hr>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Crispy
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Stuffed
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        Gluten-free
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-9">
-                                Level 1: .col-sm-9
-                                <div class="row">
-                                    <div class="col-8 col-sm-6">
-                                        Level 2: .col-8 .col-sm-6
-                                    </div>
-                                    <div class="col-4 col-sm-6">
-                                        Level 2: .col-4 .col-sm-6
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Buy</button>
-                    <button type="button" class="btn btn-primary">Cancel</button>
+
+
+                    <button type="button" id="checkout" class="btn btn-primary" data-dismiss="modal">Checkout</button>
+                    <button type="button" id="cancel" class="btn btn-danger">Cancel</button>
+                    <div id="alert" class="alert alert-danger" role="alert">
+                        Please enter your <span id="boomm"></span>
+                        <button type="button" id="bom" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="modal" id="big" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">SLICE</h5>
+
+                </div>
+                <div class="modal-body">
+                    <p>Hi <span class="name"
+                            style="text-transform: uppercase;font-family: 'Architects Daughter', cursive; font-weight: bold;"></span>
+                        your Order total of <span class='totalPrice'></span>has been received and is being processed. It
+                        will be sent to <span class="location"></span>.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--connect-->
     <div class="container-fluid padding" id="connect">
         <div class="row text-center padding">
