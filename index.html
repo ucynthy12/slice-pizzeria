@@ -75,7 +75,7 @@
                         <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
                             <h6 class="animate__animated animate__bounceInLeft animate__delay-1s">Delicious</h6>
                             <h3>MEAT pizza</h3>
-                            <button type="button" id="kgl" class="btn-primary btn-outline-secondary btn-lg">ORDER</button>
+                           <a href="#order"><button type="button"  class="btn-primary btn-outline-secondary btn-lg">ORDER</button></a> 
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 caption-img1">
                             <img class="caption-img"  src="/images/pizza1.png">
@@ -91,7 +91,7 @@
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 caption-top">
                             <h6 class="animate__animated animate__bounceInLeft animate__delay-1s">Crunchy</h6>
                             <h3>Veggie PIZZA</h3>
-                            <button type="button" id="order" class="btn-primary btn-outline-secondary btn-lg">ORDER</button>
+                            <a href="#order"><button type="button"  class="btn-primary btn-outline-secondary btn-lg">ORDER</button></a> 
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 caption-img2">
                             <img src="/images/bg10.png">
@@ -360,8 +360,8 @@
                                 <h6>Would you like your Pizza delivered?</h6>
                             </div>
                             <div class="col-md-9">
-                                <button type="submit" id='delivery' class="btn-primary">Yes</button>
-                                <button type="submit" id='no' class="btn-danger">no</button>
+                                <button type="button" class='delivery' class="btn-primary" value="yes">Yes</button>
+                                <button type="button" class='no'id ="no" class="btn-danger" value="no">no</button>
                             </div>
 
                             <div class="row">
@@ -396,7 +396,15 @@
                         &nbsp;
                         <div class="row">
                             <div id="total" class="col-sm-12">
+                                <ul class='list-group'> 
+                                    <li class="list-group-item">Size Selected:<span class="sizeSelected"></span></li>
+                                    <li class="list-group-item">Crust Selected:<span class="crustSelected "></span> </li>
+                                    <li class="list-group-item">Toppings Selected:<span class="toppingSelected"></span></li>
+                                    <li class="list-group-item">Qty Selected: <span class="qytSelected"></span></li>
+                                    <li class="list-group-item">Delivery: <span class="del"></span></li>
+                                    <li class="list-group-item">Subtotal: FRW <span class="sub"></span></li>
 
+                                </ul>  
                             </div>
                         </div>
 
@@ -407,12 +415,7 @@
 
                     <button type="button" id="checkout" class="btn btn-primary" data-dismiss="modal">Checkout</button>
                     <button type="button" id="cancel" class="btn btn-danger">Cancel</button>
-                    <div id="alert" class="alert alert-danger" role="alert">
-                        Please enter your <span id="boomm"></span>
-                        <button type="button" id="bom" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -422,13 +425,13 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">SLICE</h5>
+                    <h5 class="modal-title" style="font-family: 'Kumar One', cursive;color: #ff944d">SLICE</h5>
 
                 </div>
                 <div class="modal-body">
                     <p>Hi <span class="name"
                             style="text-transform: uppercase;font-family: 'Architects Daughter', cursive; font-weight: bold;"></span>
-                        your Order total of <span class='totalPrice'></span>has been received and is being processed. It
+                        your Order total of <span class='totalPrice'></span> has been received and is being processed. It
                         will be sent to <span class="location"></span>.</p>
                 </div>
                 <div class="modal-footer">
