@@ -33,6 +33,10 @@ $('.total').last().click(function () {
         this.qyt = qyt;
     }
 
+    PizzaChoice.prototype.pizzaPrice = function () {
+        return (size[this.size] + crust[this.crust] + this.toppings) * this.qyt
+    }
+
     var sizeSelected = $("select#size option:checked").val();
     var crustSelected = $('input[type=radio][name=crust]:checked').val();
     var toppingSelected = $("input[type=checkbox][name = toppings]:checked").val();
@@ -43,25 +47,74 @@ $('.total').last().click(function () {
         toppingSelected.push($(this).val());
         console.log(toppingSelected.join(','));
 
-        for (i = toppingSelected[0] ; i < toppingSelected.length; i++) {
-            totalToppings += toppings[toppingSelected[i]];
-            console.log(totalToppings);
-        };
-
-
     });
-    var subTotal= 0;
-    subTotal= "<ul class='list-group'>"+
-    '<li class="list-group-item">Size Selected: '+' '+ sizeSelected+'</li>'+'<li class="list-group-item">Crust Selected: '+' '+ crustSelected+ '</li>'+'<li class="list-group-item">Toppings Selected: '+' '+toppingSelected+ '</li>'+
-    '<li class="list-group-item">Qty Selected: '+' '+ qytSelected +' </li>'+'<li class="list-group-item">Subtotal: </li></ul>'
-    // var newPizza = new PizzaChoice(sizeSelected, crustSelected, toppingSelected, qytSelected);
-    // newPizza.prototype.pizzaPrice = function () { (size[sizeSelected] + crust[crustSelected] + totalToppings) * qytSelected }
-    $('#total').append(subTotal);
+    for (i = 0; i < toppingSelected.length; i++) {
+        totalToppings += parseInt(toppings[toppingSelected[i]]);
+
+    };
+    var newPizza = new PizzaChoice(sizeSelected, crustSelected, totalToppings, qytSelected);
+    var boomboom = parseInt(newPizza.pizzaPrice());
+    console.log(boomboom);
+
+    $('.list-group').show();
+    $('.sizeSelected').text(sizeSelected);
+    $('.crustSelected').text(crustSelected);
+    $('.toppingSelected').text(toppingSelected);
+    $('.qytSelected').text(qytSelected);
+    var answer = $("button, input[type='button'][class='delivery'] ");
+    var answerNo = $("button, input[type='button'][class='no'] ");
+    console.log(answer);
+    if (answer = 'yes') {
+        var total = parseInt(boomboom + 1000);
+        $('.del').text('yes');
+        $('.sub').text(total)
+
+    } else if (answerNo = 'no') {
+        $('.del').text('no');
+        $('.sub').text(boomboom);
+
+    };
+    $('button#checkout').click(function () {
+        $('#small').hide();
+        $('#big').hide();
+
+        var inputName = $('input#name').val();
+        var inputLocation = $('input#location').val();
+
+        if (inputName == " ") {
+            alert('enter your name');
+
+        } else if (inputLocation == '') {
+            alert('enter your location for delivery');
+            $('#small').show();
+        } else {
+            $('#big').show();
+            $('.name').text(inputName);
+            $('.location').text(inputLocation);
+            if ($("button,input[type=button][class=delivery]")) {
+                $('.totalPrice').text(total);
+            } else {
+                $('.totalPrice').text(boomboom);
+            }
+        }
+        resetFields();
+    })
+    resetFields();
 
 
 })
+function resetFields() {
+    $('.sizeSelected').val(' ');
+    $('.crustSelected').val(' ');
+    $('.toppingSelected').val(' ');
+    $('.qytSelected').val(' ');
+    $('.subTotal').val(' ');
+    $('.list-group').val(' ');
+}
+
+
 $(function () {
-    $('button#delivery').click(function () {
+    $('button.delivery').click(function () {
         $('#option').show(function (event) {
             event.preventDefault();
         }
@@ -69,39 +122,28 @@ $(function () {
     })
 
 })
-$(function(){
+$(function () {
     $('button#no').click(function () {
         $('#option').hide();
     })
 
 })
-$(function () {
-    $('button#checkout').click(function () {
-        var inputName = $('input#name').val();
-        var inputLocation = $('input#location').val();
-        if (inputName == "") {
-            alert('enter your name');
-        } else if (inputLocation = '') {
-            alert('enter your location for delivery');
- 
-        }else{ 
-            $('#big').show(function () {
-            $('.name').text('inputName');
-            $('.location').text('inputLocation');
-            $('.totalPrice').text('totalPrice');
-        })        
-        }
-        $('#small').hide();
-    })
 
-})
+
+
+
 $(function () {
     $('#close').click(function () {
         $("#big").hide();
+        resetFields();
     })
+   
 })
-$(function(){
-    $('button#cancel').click(function(){
+
+$(function () {
+    $('button#cancel').click(function () {
         $('#small').hide();
-    })
+    });
+   
 })
+
