@@ -263,9 +263,6 @@ hr.lightB {
     display: none;
 }
 
-#alert {
-    display: none;
-}
 
 .modal-body {
     font-family: 'Abril Fatface', cursive;
@@ -285,4 +282,7 @@ hr.lightB {
     font-family: 'Piazzolla', serif;
     color: black;
     font-weight: 700;
+}
+.list-group{
+    display: none;
 }
