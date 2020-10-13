@@ -1,9 +1,10 @@
+//Business Logic
 $(function () {
     $("a#kgl").click(function () {
         $("#small").show();
     })
 })
-
+//user interface
 $('.total').last().click(function () {
 
     var size = {
@@ -61,15 +62,15 @@ $('.total').last().click(function () {
     $('.crustSelected').text(crustSelected);
     $('.toppingSelected').text(toppingSelected);
     $('.qytSelected').text(qytSelected);
-    var answer = $("button, input[type='button'][class='delivery'] ");
-    var answerNo = $("button, input[type='button'][class='no'] ");
-    console.log(answer);
-    if (answer = 'yes') {
+
+    var radioValue = $("input[name=delivery]:checked").val();
+
+    if (radioValue == 'yes') {
         var total = parseInt(boomboom + 1000);
         $('.del').text('yes');
         $('.sub').text(total)
 
-    } else if (answerNo = 'no') {
+    } else {
         $('.del').text('no');
         $('.sub').text(boomboom);
 
@@ -80,27 +81,36 @@ $('.total').last().click(function () {
 
         var inputName = $('input#name').val();
         var inputLocation = $('input#location').val();
+        if (radioValue == 'yes') {
+            if (inputName == " ") {
+                alert('enter your name');
 
-        if (inputName == " ") {
-            alert('enter your name');
-
-        } else if (inputLocation == '') {
-            alert('enter your location for delivery');
-            $('#small').show();
-        } else {
-            $('#big').show();
-            $('.name').text(inputName);
-            $('.location').text(inputLocation);
-            if ($("button,input[type=button][class=delivery]")) {
-                $('.totalPrice').text(total);
+            } else if (inputLocation == '') {
+                alert('enter your location for delivery');
+                $('#small').show();
             } else {
-                $('.totalPrice').text(boomboom);
+                $('#big').show();
+                $('.name').text(inputName);
+                $('.location').text(`It will be sent to ${inputLocation}`);
+                $('.totalPrice').text(total);
             }
+        }
+
+        else {
+            $('#big').show();
+            $('.totalPrice').text(boomboom);
         }
         resetFields();
     })
     resetFields();
 
+    if (radioValue == 'yes') {
+        $("#option").show(function (event) {
+            event.preventDefault();
+        })
+    } else {
+        $('#option').hide();
+    }
 
 })
 function resetFields() {
@@ -112,38 +122,18 @@ function resetFields() {
     $('.list-group').val(' ');
 }
 
-
-$(function () {
-    $('button.delivery').click(function () {
-        $('#option').show(function (event) {
-            event.preventDefault();
-        }
-        );
-    })
-
-})
-$(function () {
-    $('button#no').click(function () {
-        $('#option').hide();
-    })
-
-})
-
-
-
-
 $(function () {
     $('#close').click(function () {
         $("#big").hide();
         resetFields();
     })
-   
+
 })
 
 $(function () {
     $('button#cancel').click(function () {
         $('#small').hide();
     });
-   
+
 })
 
