@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>SLICE-pizzeria</title>
 </head>
 
@@ -27,7 +27,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="images/logo2.png" width="30" height="30" class="d-inline-block align-top" alt="">
-              SLICE</a>
+                SLICE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -65,36 +65,40 @@
         </ul>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="../images/bg1.jpg">
+                <img src="https://res.cloudinary.com/ucynthy12/image/upload/v1602583123/bg1_ee7wa1.jpg">
             </div>
             <div class="carousel-item">
-                <img src="../images/bg2.jpg">
+                <img src="https://res.cloudinary.com/ucynthy12/image/upload/v1602583162/bg2_dp0xei.jpg">
                 <div class="carousel-caption">
                     <div class="row caption">
                         <div class=" col-md-2 col-lg-2"></div>
                         <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
                             <h6 class="animate__animated animate__bounceInLeft animate__delay-1s">Delicious</h6>
                             <h3>MEAT pizza</h3>
-                           <a href="#order"><button type="button"  class="btn-primary btn-outline-secondary btn-lg">ORDER</button></a> 
+                            <a href="#order"><button type="button"
+                                    class="btn-primary btn-outline-secondary btn-lg">ORDER</button></a>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 caption-img1">
-                            <img class="caption-img"  src="../images/pizza1.png">
+                            <img class="caption-img"
+                                src="https://res.cloudinary.com/ucynthy12/image/upload/v1602585860/pizza1_pujn7c.png">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="../images/bg2.jpg" class="d-block w-100" alt="...">
+                <img src="https://res.cloudinary.com/ucynthy12/image/upload/v1602583162/bg2_dp0xei.jpg"
+                    class="d-block w-100" alt="...">
                 <div class="carousel-caption">
                     <div class="row caption">
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 caption-top">
                             <h6 class="animate__animated animate__bounceInLeft animate__delay-1s">Crunchy</h6>
                             <h3>Veggie PIZZA</h3>
-                            <a href="#order"><button type="button"  class="btn-primary btn-outline-secondary btn-lg">ORDER</button></a> 
+                            <a href="#order"><button type="button"
+                                    class="btn-primary btn-outline-secondary btn-lg">ORDER</button></a>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 caption-img2">
-                            <img src="../images/bg10.png">
+                            <img src="https://res.cloudinary.com/ucynthy12/image/upload/v1602583139/bg10_oxrmxc.png">
                         </div>
                     </div>
                 </div>
@@ -129,7 +133,8 @@
                 <div class="col-md-2"></div>
                 <div class="col-xs-3 col-sm-3 col-md-3">
                     <div class="card">
-                        <img class="card-img-top" src="../images/pizzaSize.png">
+                        <img class="card-img-top"
+                            src="https://res.cloudinary.com/ucynthy12/image/upload/v1602583310/pizzaSize_vipvk9.png">
                         <div class="card-body">
                             <h4 class="card-title">Small</h4>
                             <h5>8 inches<h5>
@@ -139,7 +144,8 @@
                 </div>
                 <div class="col-xs-3 col-sm-3 col-md-3">
                     <div class="card">
-                        <img class="card-img-top" src="../images/pizzaSize.png">
+                        <img class="card-img-top"
+                            src="https://res.cloudinary.com/ucynthy12/image/upload/v1602583310/pizzaSize_vipvk9.png">
                         <div class="card-body">
                             <h4 class="card-title">Medium</h4>
                             <h5>12 inches<h5>
@@ -149,7 +155,8 @@
                 </div>
                 <div class=" col-xs-3 col-sm-3 col-md-3">
                     <div class="card">
-                        <img class="card-img-top" src="../images/pizzaSize.png">
+                        <img class="card-img-top"
+                            src="https://res.cloudinary.com/ucynthy12/image/upload/v1602583310/pizzaSize_vipvk9.png">
                         <div class="card-body">
                             <h4 class="card-title">Large</h4>
                             <h5>14 inches<h5>
@@ -359,9 +366,19 @@
                             <div class="col-md-9">
                                 <h6>Would you like your Pizza delivered?</h6>
                             </div>
-                            <div class="col-md-9">
-                                <button type="button" class='delivery' class="btn-primary" value="yes">Yes</button>
-                                <button type="button" class='no'id ="no" class="btn-danger" value="no">no</button>
+                            <div class="col-md-9" id="deliveries">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="delivery" value="yes" id="yes">
+                                    <label class="form-check-label" for="yes">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="delivery" value="no" id="no">
+                                    <label class="form-check-label" for="no" checked>
+                                        No
+                                    </label>
+                                </div>
                             </div>
 
                             <div class="row">
@@ -396,15 +413,17 @@
                         &nbsp;
                         <div class="row">
                             <div id="total" class="col-sm-12">
-                                <ul class='list-group'> 
+                                <ul class='list-group'>
                                     <li class="list-group-item">Size Selected:<span class="sizeSelected"></span></li>
-                                    <li class="list-group-item">Crust Selected:<span class="crustSelected "></span> </li>
-                                    <li class="list-group-item">Toppings Selected:<span class="toppingSelected"></span></li>
+                                    <li class="list-group-item">Crust Selected:<span class="crustSelected "></span>
+                                    </li>
+                                    <li class="list-group-item">Toppings Selected:<span class="toppingSelected"></span>
+                                    </li>
                                     <li class="list-group-item">Qty Selected: <span class="qytSelected"></span></li>
                                     <li class="list-group-item">Delivery: <span class="del"></span></li>
                                     <li class="list-group-item">Subtotal: FRW <span class="sub"></span></li>
 
-                                </ul>  
+                                </ul>
                             </div>
                         </div>
 
@@ -415,7 +434,7 @@
 
                     <button type="button" id="checkout" class="btn btn-primary" data-dismiss="modal">Checkout</button>
                     <button type="button" id="cancel" class="btn btn-danger">Cancel</button>
-                   
+
                 </div>
             </div>
         </div>
@@ -431,8 +450,8 @@
                 <div class="modal-body">
                     <p>Hi <span class="name"
                             style="text-transform: uppercase;font-family: 'Architects Daughter', cursive; font-weight: bold;"></span>
-                        your Order total of <span class='totalPrice'></span> has been received and is being processed. It
-                        will be sent to <span class="location"></span>.</p>
+                        your Order total of FRW <span class='totalPrice'></span> has been received and is being
+                        processed. <span class="location"></span></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
